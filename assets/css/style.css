@@ -6,11 +6,12 @@ body {
 
 textarea{
   background: transparent;
-  border: none;
+  border: black;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  border-bottom: 1px solid black;
+  padding: 15px;
 }
 
 .jumbotron {
@@ -26,7 +27,7 @@ textarea{
 }
 
 .time-block{
-  text-align: center;
+  text-align: right;
   border-radius: 15px;
 }
 
