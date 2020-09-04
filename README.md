@@ -10,8 +10,11 @@ As an employee with a busy schedule, the user wants to add important events to a
 
 
 ## Technologies
-1. HTML and CSS powered by jQuery
-2. Moment.js
+1. HTML 
+2. CSS 
+3. jQuery
+4. Bootstrap
+5. Moment.js
 
 
 ## Screenshot
