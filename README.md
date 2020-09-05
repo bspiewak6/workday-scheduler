@@ -32,5 +32,3 @@ As an employee with a busy schedule, the user wants to add important events to a
 * [Work Day Scheduler Github Repository](https://github.com/bspiewak6/workday-scheduler)
 
 
-
-

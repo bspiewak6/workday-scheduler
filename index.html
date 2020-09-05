@@ -16,24 +16,65 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
-      <p id="currentTime"></p>
     </header>
     <!-- Timeblocks go here -->
-    <div class="container mb-1">
+    <div class="container">
         <!-- 9am row -->
         <div class="row">
-          <p class="col-md-1 mt-3 time-block">9AM</p>
-          <textarea id="text-area-9" class="description col-md-10 selected-hour">Task</textarea>
-          <button class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
-        </div>
-        <!-- 10am row -->
-        <div class="row">
-          <p class="col-md-1 mt-3 time-block">10AM</p>
-          <textarea id="text-area-10" class="description col-md-10 selected-hour">Task</textarea>
-          <button class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
+            <p class="col-1 mt-3 time-block" id="hour9">9AM</p>
+            <textarea class="description col-10 selected-hour">Task</textarea>
+            <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
         
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour10">10AM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+        
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour11">11AM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+        
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour12">12PM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+        
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour13">1PM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
 
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour14">2PM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour15">3PM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour16">4PM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+       
+        <div class="row">
+          <p class="col-1 mt-3 time-block" id="hour16">5PM</p>
+          <textarea class="description col-10 selected-hour">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+        
+    <!-- jQuery, Moment.js and script.js file-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./js/script.js"></script>

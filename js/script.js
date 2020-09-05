@@ -1,37 +1,31 @@
-var tasks= $(".selected-hour")
 var currentDay = moment().format("dddd, MMMM Do YYYY");
-var currentClock = moment().format("h:mm a")
-// function to show current day in the top header
-$("#currentDay").text(currentDay);
-$("#currentTime").text(currentClock);
+var currentHour = moment().hour();
+var taskBlock = $("#textarea");
+var selectedHour = $(".selected-hour")
 
-// function that changes the color of the calendar as the time passes throughout the day
+// localstorage variable
+var taskContent = $("#textarea").data()
+
+// Displays the current date and time
+$("#currentDay").text(moment().format("llll"));
+
+// function that changes the color of the calendar as the time passes
 var hourColor = function() {
-    var currentHour = moment().hour();    
-    
-    for (var i = 0; i < tasks.length; i++) {
-    var task = $(tasks[i])
-    var blockHour = task.data("hour");
 
-    if (blockHour < currentHour) {
+    for (var i = 0; i < selectedHour.length; i++) {
+        var task = $(selectedHour[i])
+        var timeBlock = $("#time-block");
+
+    if (timeBlock < currentHour) { 
         task.addClass("past")
     }
-    else if (blockHour === currentHour) {
+    else if (timeBlock === currentHour) {
         task.addClass("present")
     }
-    else { 
+    else {
         task.addClass("future")
     }
     }
 };
 
-// function that gets the p
-var updateTime = function () {
-    // set time = current time
-    var timeNow = moment();
-    // format the time to show the month, day year
-    var displayTime = timeNow.format("LL");
-    // set text content equal to the time
-    currentDay.text(displayTime);
-};
-
+hourColor();
