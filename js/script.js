@@ -1,11 +1,9 @@
-var currentDay = moment().format("dddd, MMMM Do YYYY");
-var currentHour = moment().hour();
-var taskBlock = $("#textarea");
-var selectedHour = $(".selected-hour")
+var taskBlock = $("textarea");
+var selectedHour = $(".selected-hour");
 
 // localstorage variable
-var taskContent = $("#textarea").data()
-
+var taskContent = $("textarea").data()
+var currentHour = moment().hour();
 // Displays the current date and time
 $("#currentDay").text(moment().format("llll"));
 
@@ -14,18 +12,21 @@ var hourColor = function() {
 
     for (var i = 0; i < selectedHour.length; i++) {
         var task = $(selectedHour[i])
-        var timeBlock = $("#time-block");
-
-    if (timeBlock < currentHour) { 
+        // var timeBlock = task.data("hour");
+        
+        if (taskBlock < currentHour) { 
         task.addClass("past")
-    }
-    else if (timeBlock === currentHour) {
+        
+        }
+        else if (taskBlock === currentHour) {
         task.addClass("present")
-    }
-    else {
+        }
+        else {
         task.addClass("future")
     }
-    }
+}
 };
-
 hourColor();
+
+
+// 
