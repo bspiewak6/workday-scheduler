@@ -16,20 +16,21 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime"></p>
     </header>
     <!-- Timeblocks go here -->
-    <div class="container mb-4">
+    <div class="container mb-1">
         <!-- 9am row -->
         <div class="row">
-          <div class="col-1 mt-3 time-block">9AM</div>
-          <textarea class="col-10 textarea">Task</textarea>
-          <button class="col-1 saveBtn"></button>
+          <p class="col-md-1 mt-3 time-block">9AM</p>
+          <textarea id="text-area-9" class="description col-md-10 selected-hour">Task</textarea>
+          <button class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
         <!-- 10am row -->
         <div class="row">
-          <div class="col-1 mt-3 time-block">10AM</div>
-          <textarea class="col-10 textarea">Task</textarea>
-          <button class="col-1 saveBtn"></button>
+          <p class="col-md-1 mt-3 time-block">10AM</p>
+          <textarea id="text-area-10" class="description col-md-10 selected-hour">Task</textarea>
+          <button class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
         
 
