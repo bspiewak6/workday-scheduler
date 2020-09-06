@@ -1,8 +1,10 @@
-// Displays the current date and time
+// displays the current date and time
 $("#currentDay").text(moment().format("llll"));
-var taskBlock = $("#text-area")
+
+// global variables and array for hours
+var taskBlock = $(".text-area");
 var selectedHour = $(".selected-hour");
-var taskInput = JSON.parse(localStorage.getItem("taskItem")) || [];
+var hourArr = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 
 // function that changes background color as time passes throughout the calendar day
 var hourColor = function() {
@@ -23,34 +25,29 @@ var hourColor = function() {
         
         else {
         task.addClass("future")
+        }
     }
 };
 
-};
-hourColor();
-
 // function when user clicks the save button
 $(".saveBtn").on("click", function(event) {
-    event.preventDefault();
-
-// Get the task "value" from the textbox and store it as a variable using `.val()` and `.trim()`
-    var taskValue = $('#text-area')
-    .val()
-    .trim();
-
-    var taskID = $(this)
-    .closest("div")
-    .text();
-
-    console.log(taskID);
-
-// add the new task to my new variable
-    taskInput.push( {
-        text: taskValue,
-        id: taskID
-    });
-
-// save the tasks into localStorage
-    localStorage.setItem("taskItem", JSON.stringify(taskInput));
+    var target = event.currentTarget.previousElementSibling.id;
+    var userInput = $("#" + target).val().trim();
+    // save the tasks into localStorage
+    localStorage.setItem("taskItem", JSON.stringify(userInput));
 });
 
+// create function to keep saved events on page when user refreshes
+function onLoad() {
+    for (var i = 0; i < hourArr.length; i++) {
+        var hour = hourArr[i];
+        
+        // key in localStorage
+        var value = JSON.parse(localStorage.getItem("text-area-" + hour));
+        // value in localStorage
+        $("#text-area-" + hour).val(value);
+    }
+};
+
+onLoad();
+hourColor();
