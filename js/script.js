@@ -1,32 +1,32 @@
-var taskBlock = $("textarea");
-var selectedHour = $(".selected-hour");
-
-// localstorage variable
-var taskContent = $("textarea").data()
-var currentHour = moment().hour();
 // Displays the current date and time
 $("#currentDay").text(moment().format("llll"));
 
-// function that changes the color of the calendar as the time passes
+var selectedHour = $(".selected-hour");
+
+
+
+
+// function that changes background color as time passes
 var hourColor = function() {
+    var currentHour = (moment().hour());
 
     for (var i = 0; i < selectedHour.length; i++) {
         var task = $(selectedHour[i])
-        // var timeBlock = task.data("hour");
-        
-        if (taskBlock < currentHour) { 
+        var taskHour = task.data("hour");
+       
+        if (taskHour < currentHour) { 
         task.addClass("past")
-        
         }
-        else if (taskBlock === currentHour) {
+        
+        else if (taskHour === currentHour) {
         task.addClass("present")
         }
+        
         else {
         task.addClass("future")
     }
-}
+};
+
 };
 hourColor();
 
-
-// 
