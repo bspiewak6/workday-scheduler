@@ -1,5 +1,5 @@
 // displays the current date and time
-$("#currentDay").text(moment().format("llll"));
+$("#currentDay").text(moment().format("[Today is] dddd, MMMM Do, YYYY"));
 
 // global variables and array for hours
 var taskBlock = $(".text-area");
