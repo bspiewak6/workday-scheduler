@@ -31,10 +31,11 @@ var hourColor = function() {
 
 // function when user clicks the save button
 $(".saveBtn").on("click", function(event) {
+    // previous element sibling used to track button click and textarea is previous element in div class
     var target = event.currentTarget.previousElementSibling.id;
     var userInput = $("#" + target).val().trim();
     // save the tasks into localStorage
-    localStorage.setItem("taskItem", JSON.stringify(userInput));
+    localStorage.setItem(target, JSON.stringify(userInput));
 });
 
 // create function to keep saved events on page when user refreshes
