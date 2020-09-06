@@ -3,16 +3,13 @@ $("#currentDay").text(moment().format("llll"));
 
 var selectedHour = $(".selected-hour");
 
-
-
-
 // function that changes background color as time passes
 var hourColor = function() {
     var currentHour = (moment().hour());
 
     for (var i = 0; i < selectedHour.length; i++) {
         var task = $(selectedHour[i])
-        var taskHour = task.data("hour");
+        var taskHour = task.data().time;
        
         if (taskHour < currentHour) { 
         task.addClass("past")
@@ -29,4 +26,6 @@ var hourColor = function() {
 
 };
 hourColor();
+
+
 

@@ -20,19 +20,27 @@
     <!-- Timeblocks go here -->
     <div class="container">
         <!-- 9am row -->
-        <div class="row h-25"> <!-- h-25 updates to 25% heigh of row -->
-          <div class="hour col-1"> <!-- hour id sets dotted border and col-1 is width -->
+        <div class="row h-25"> 
+          <div class="hour col-1"> 
             <p class="time-block">9AM</p>
           </div>
-          <textarea class="description col-10 selected-hour" id="text-area-9">Task</textarea>
+          <textarea class="description col-10 selected-hour" id="text-area-9" data-time="9">Task</textarea>
           <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
         <!-- 10am row -->
         <div class="row h-25"> 
-          <div class="hour col-1">
+          <div class="hour col-1"> 
             <p class="time-block">10AM</p>
           </div>
-          <textarea class="description col-10 selected-hour" id="text-area-10">Task</textarea>
+          <textarea class="description col-10 selected-hour" id="text-area-10" data-time="10">Task</textarea>
+          <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+        <!-- Misc time row -->
+        <div class="row h-25"> 
+          <div class="hour col-1"> 
+            <p class="time-block">9PM</p>
+          </div>
+          <textarea class="description col-10 selected-hour" id="text-area-21" data-time="21">Task</textarea>
           <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
         </div>
         
